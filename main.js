@@ -109,42 +109,6 @@
 // }
 // const number = [1,-2, 34, 2, 3, 100, 150];
 // checNumber(number);
-// 5-masala
-// function squarElement(arr) {
-//     const squaredArray = arr.map(num => num * num);
-//     return squaredArray;
-// }
-// function printArray(arr) {
-//     arr.forEach(num => console.log(num));
-// }
-// const number = [1, 2, 3, 4, 5];
-// const squardNumber = squarElement(number);
-// printArray(squardNumber);
-// 7-masala
-// Talabalar ma'lumotlari
-// let student = [
-//   { name: "aziz", age: 21, score: 75 },
-//   { name: "jafar", age: 22, score: 81 },
-//   { name: "hayot", age: 20, score: 80 },
-//   { name: "rahima", age: 23, score: 90 },
-//   { name: "omina", age: 24, score: 79},
-// ];
-// let firstHighScorer = student.find(function (student) {
-//   return student.score >= 80;
-// });
-// console.log(
-//   "birinchi 80 dan yuqori ball olgan talaba:",
-//   firstHighScorer.name,
-//   firstHighScorer.age
-// );
-// let highScoringStudents = student
-//   .filter(function (student) {
-//     return student.score > 80;
-//   })
-//   .map(function (student) {
-//     return student.name.toUpperCase();
-//   });
-// console.log("80 dan yuqori  olgan talabalar :", highScoringStudents);
 // Yozuvlarga oid.
 // 1-masala
 // function convertUpper(str) {
@@ -166,10 +130,4 @@
 // } else {
 //   console.log(`"${substr}" substringi yoq`);
 // }
-// 4-masala
-// function reverseWord(str) {
-//     return str.split(' ').reverse().join(' ');
-// }
-// let inputStr = "hello world";
-// let reverseStr = reverseWord(inputStr);
-// console.log(reverseStr);
+
