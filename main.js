@@ -55,79 +55,153 @@
 //     inner();
 
 /* ________________________________ uyga vazifa ____________________________________ */
-
-
-
-// Masalalar Massivlarga oid
-// 1-masala
-// let arr = ["hello", "world", "mersades", "bmw", "matiz", "lacetti"];
-// let result = arr
-//   .filter(function (value) {
-//     return value.length > 5;
-//   })
-//   .map(function (value) {
-//     return value.charAt(0).toUpperCase() + value.slice(1);
-//   });
-// console.log(result);
-// 2-masala
-// function findStudentName(students) {
-//   const student = students.find(function(student) {
-//       return student.age > 20;
-//   });
-
-//   return student ? student.name.toUpperCase() : null;
-// }
-// const studentArray = [
-//   { name: "bobur", age: 19 },
-//   { name: "anvar", age: 22 },
-//   { name: "jora", age: 23 },
-//   { name: "soli", age: 21 }
-// ];
-// const result = findStudentName(studentArray);
-// console.log(result);
-// 3-masala
-// function totalPrice(value) {
-//   return value
-//       .filter(value => value > 10000)
-//       .reduce((total, value) => total + value, 0);
-// }
-// const priceAray = [5000, 15000, 12000, 8000, 20000, 7500];
-// const total = totalPrice(priceAray);
-// console.log(total);
-// 4-masala
-// function checNumber(arr) {
-//   const total = arr.every((num) => num > 0);
-//   const hasLargeNumber = arr.some((num) => num > 100);
-//   if (total) {
-//     console.log("barcha sonlar musbat");
-//   } else {
-//     console.log("musbat bo'lmagan sonlar bor");
+// var a = 1;
+// function outter() {
+//   var b = 2;
+//   function inner() {
+//     var c = 3;
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
 //   }
-//   if (hasLargeNumber) {
+//   inner();
+// }
+// outter();
+
+// console.log(x); // ?
+// var x = 5;
+// console.log(x); // ?
+
+// console.log(y); // ?
+// let y = 10;
+// console.log(y); // ?
+
+// {
+//   console.log(z); // ?
+//   let z = 15;
+//   console.log(z); // ?
+// }
+
+// // // // Masalalar
+// // // Massivlarga oid
+// // ### Masala 1:
+// function lengthArrayVerify(arg) {
+//   let res = arg
+//     .filter(function (value) {
+//       return value.length >= 5;
+//     })
+//     .map(function (value) {
+//       return value.charAt(0).toUpperCase() + value.slice(1);
+//     });
+//   return res;
+// }
+// let arr = ["olma", "behi", "mercedes", "qulupnay", "Ferrari", "Windovs"];
+// let res1 = lengthArrayVerify(arr);
+// console.log(res1);
+
+// // ### Masala 2:
+// function student(arg) {
+//   let names = arg.map(function (student) {
+//     return student.name;
+//   });
+//   let res = arg.find(function (student) {
+//     return student.age > 20;
+//   });
+//   return res.name.toUpperCase() + " - " + res.age;
+// }
+// let arr = [
+//   { name: "Sarodr", age: 17 },
+//   { name: "Abdulloh", age: 16 },
+//   { name: "Murod", age: 29 },
+// ];
+// console.log(student(arr));
+
+// // // ### Masala 3:
+// function pricesSumArray(arg) {
+//   let sum = arg.filter(function (value) {
+//     return value.price > 10000;
+//   });
+//   let gen = sum.reduce(function (value, index) {
+//     return value + index.price;
+//   }, 0);
+
+//   return gen;
+// }
+// let arr = [
+//   { name: "Phone", price: 12000 },
+//   { name: "Tablet", price: 80000 },
+//   { name: "Laptop", price: 15000 },
+//   { name: "Monitor", price: 7000 },
+// ];
+// console.log(pricesSumArray(arr));
+
+// // ### Masala 4:
+// function verifyArray(arg) {
+//   if (
+//     arg.every(function (value) {
+//       return value > 0;
+//     })
+//   ) {
+//     console.log("Barcha sonlar musbat");
+//   }
+//   if (
+//     arg.some(function (value) {
+//       return value > 100;
+//     })
+//   ) {
 //     console.log("Katta son bor");
 //   }
 // }
-// const number = [1,-2, 34, 2, 3, 100, 150];
-// checNumber(number);
-// Yozuvlarga oid.
-// 1-masala
-// function convertUpper(str) {
-//   return str.toUpperCase();
-// }
-// let inptString = "hello,world";
-// let  upperCaseStr = convertUpper(inptString);
-// console.log(upperCaseStr);
-// 2-masala
-// function checkSubstr(mainString, substring) {
-//   return mainString.includes(substring);
-// }
-// let mainString = "hello , world!";
-// let substr = "world";
-// let result = checkSubstr(mainString, substr);
+// let arr = [10, 25, 50, 120];
+// verifyArray(arr);
 
-// if (result) {
-//   console.log(`"${substr}" substringi bor`);
-// } else {
-//   console.log(`"${substr}" substringi yoq`);
+// // ### Masala 5:
+// function kv(arg) {
+//   arg.forEach(function (value) {
+//     console.log(value * value);
+//   });
 // }
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// kv(arr);
+// // ### Masala 6:
+// function counterArray(arg) {
+//   let sum = arg
+//     .filter(function (value) {
+//       return value.wage >= 2000;
+//     })
+//     .map(function (value) {
+//       return value.wage * 1.1;
+//     })
+//     .reduce(function (value, index) {
+//       return value + index;
+//     }, 0);
 
+//   return sum;
+// }
+// let arr = [
+//   { name: "Ali", wage: 1500 },
+//   { name: "Vali", wage: 2500 },
+//   { name: "Aziz", wage: 3500 },
+//   { name: "Shahzod", wage: 1800 },
+// ];
+// console.log(counterArray(arr));
+// // ### Masala 7:
+// // Ishlay olmadim buni domladan ishlap berishini soreman.
+// // // // Yozuvlarga oid
+// // ### Masala 1:
+// const toUpperCaseString = (str) => str.toUpperCase();
+// let str = "salom dunyo";
+// console.log(toUpperCaseString(str));
+
+// // ### Masala 3:
+// function switchString(str) {
+//   return str.replace("JavaScript", "JS");
+// }
+// let str = "JavaScript";
+// console.log(switchString(str));
+// // ### Masala 4:
+// function reverseString(str) {
+//   return str.split(" ").reverse().join(" ");
+// }
+// let str = "Salom dunyo";
+// console.log(reverseString(str));
